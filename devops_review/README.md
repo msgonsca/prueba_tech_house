@@ -38,7 +38,7 @@ esto, es así si no encontramos dentro de la carpeta que contiene el archivo dep
 kubectl apply -f devops_review/deployment.yaml
 ```
 
-## Como se podrá ver, en el archivo deployment.yml se crean varios recursos, como ser el deployment, service, HPA (escalamiento horizontal de pods) y también el Ingress, que en el caso que implemnte es sencillo, pero en caso de ir a producción, el mismo debería tener una forma similar al ejemplo que dejo a continuación:
+Como se podrá ver, en el archivo deployment.yml se crean varios recursos, como ser el deployment, service, HPA (escalamiento horizontal de pods) y también el Ingress, que en el caso que implemnte es sencillo, pero en caso de ir a producción, el mismo debería tener una forma similar al ejemplo que dejo a continuación:
 ```
 ---
 apiVersion: networking.k8s.io/v1beta1
