@@ -8,6 +8,10 @@ Proceso de creación de la imagen de docker:
 docker build -t “image-name”:”tag” .
 ```
 dónde “image-name” representa el nombre que le vamos a asignar a la imagen y “tag” es el tag con el cual la imagen se va a crear, luego el . al final indica, que para la creación de esta imagen, se tiene que usar el archivo Dockerfile del directorio actual. Es importante que al momento de ejecutar este comando, estemos posicionados en el directorio que contiene el Dockerfile, caso contrario, tendremos un error.
+Para este caso, el comando es el siguiente:
+```
+docker build -f <path/to/Dockerfile> -t “image-name”:”tag” .
+```
 
 2. Una vez que creamos la imagen, podemos ejecutarlo de dos formas:
 ```
@@ -31,7 +35,7 @@ kubectl apply -f deployment.yml
 ```
 esto, es así si no encontramos dentro de la carpeta que contiene el archivo deployment.yml, de otra manera seria:
 ```
-kubectl apply -f path/to/deployment.yaml
+kubectl apply -f devops_review/deployment.yaml
 ```
 
 ## Como se podrá ver, en el archivo deployment.yml se crean varios recursos, como ser el deployment, service, HPA (escalamiento horizontal de pods) y también el Ingress, que en el caso que implemnte es sencillo, pero en caso de ir a producción, el mismo debería tener una forma similar al ejemplo que dejo a continuación:
